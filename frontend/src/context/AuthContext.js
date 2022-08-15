@@ -17,7 +17,7 @@ export const AuthContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(authReducer, {
         user: null
     })
-    // save json token in the state if the browser reload
+    // save json token in the application storage if the browser reload
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem('user'))
 
